@@ -9,7 +9,7 @@
 
             <hr>
 
-            <input type="text" class="form-control" #myInp (input)="onKeyUp(myInp.value)">
+            <input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
             <p>{{ inputText }}</p>
 
 
