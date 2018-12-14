@@ -1,23 +1,7 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <button (click)="addCar()" class="btn btn-primary">Добавить машину</button>
-            <p>{{addCarStatus}}</p>
-            <hr>
-            <div class="app-car"></div>
-            <div class="app-car"></div>
-
-            <hr>
-
-            <input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
-            <input type="text" class="form-control" [(ngModel)]="inputText">
-            <p>{{ inputText }}</p>
-
-
-        </div>
-    </div>
-</div>
-
-
-
-
+<input type="text" class="form-control" [(ngModel)]="carName">
+<button (click)="addCar()" class="btn btn-primary">Добавить машину</button>
+<p *ngIf="!addCarStatus">Машина не добавлена</p>
+<p *ngIf="addCarStatus">Машина добавлена</p>
+<hr>
+<div class="app-car"></div>
+<div class="app-car"></div>
