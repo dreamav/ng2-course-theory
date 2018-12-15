@@ -10,6 +10,7 @@ export class CarsComponent {
     carName = ''
     addCarStatus = false
     cars = ["Ford", "Audi", "BMW"]
+    items = [{id:1, name:'item 1'},{id:3, name:'item 6'},{id:9, name:'item 9'}]
 
     constructor() {}
 
