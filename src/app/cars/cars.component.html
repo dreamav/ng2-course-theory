@@ -3,5 +3,5 @@
 <p *ngIf="!addCarStatus">Машина не добавлена</p>
 <p *ngIf="addCarStatus">Машина добавлена</p>
 <hr>
-<div class="app-car"></div>
-<div class="app-car"></div>
+
+<div class="app-car" *ngFor="let car of cars"></div>

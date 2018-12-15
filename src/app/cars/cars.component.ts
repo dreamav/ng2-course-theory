@@ -9,12 +9,14 @@ export class CarsComponent {
 
     carName = ''
     addCarStatus = false
+    cars = ["Ford", "Audi", "BMW"]
 
     constructor() {}
 
     addCar(){
         this.addCarStatus = true
-
+        this.cars.push(this.carName)
+        this.carName = ""
     }
 
 }
