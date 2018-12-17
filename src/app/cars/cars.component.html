@@ -3,4 +3,4 @@
 <button (click)="addCar()" class="btn btn-primary">Добавить машину</button>
 <hr>
 
-<div class="app-car" *ngFor="let car of cars"></div>
+<div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>
