@@ -11,10 +11,10 @@ export class CarsComponent {
     addCarStatus = false
     cars = ["Ford", "Audi", "BMW", "Mazda", "Lada", "Bentley"]
     dates = [
-        new Date(2015, 3, 11),
-        new Date(2011, 2, 5),
-        new Date(2017, 4, 6),
-        new Date(2000, 1, 7),
+        new Date(2015, 3, 11).toDateString(),
+        new Date(2011, 2, 5).toDateString(),
+        new Date(2017, 4, 6).toDateString(),
+        new Date(2000, 1, 7).toDateString(),
     ]
 
 

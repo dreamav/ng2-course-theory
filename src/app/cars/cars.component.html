@@ -8,6 +8,6 @@
 
 <ul>
     <li *ngFor="let date of dates; let idx = index">
-        <b>{{idx + 1}}</b> - {{date | date:"short"}}
+        <b>{{idx + 1}}</b> - {{date | uppercase}}
     </li>
 </ul>
