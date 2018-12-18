@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCarComponent implements OnInit {
 
+    carName = ''
+    carYear = 2017
+
+    addCar(){
+        this.carName = ""
+        this.carYear = 2017
+    }
+
   constructor() { }
 
   ngOnInit() {
