@@ -1,4 +1,6 @@
 <app-add-car (onAddCar)="updateCarlist($event)"></app-add-car>
 <hr>
 
-<div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>
+<div class="list-group">
+    <div class="app-car list-group-item" *ngFor="let car of cars" [carItem]="car"></div>
+</div>
