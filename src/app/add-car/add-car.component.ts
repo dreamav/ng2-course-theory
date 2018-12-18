@@ -1,9 +1,10 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-add-car',
   templateUrl: './add-car.component.html',
-  styleUrls: ['./add-car.component.css']
+  styleUrls: ['./add-car.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
 export class AddCarComponent implements OnInit {
 
