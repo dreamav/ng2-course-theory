@@ -3,8 +3,7 @@ import {Component, EventEmitter, OnInit, Output, ViewEncapsulation} from '@angul
 @Component({
   selector: 'app-add-car',
   templateUrl: './add-car.component.html',
-  styleUrls: ['./add-car.component.css'],
-    encapsulation: ViewEncapsulation.None
+  styleUrls: ['./add-car.component.css']
 })
 export class AddCarComponent implements OnInit {
 
@@ -12,12 +11,14 @@ export class AddCarComponent implements OnInit {
     carYear = 2017
     @Output('onAddCar') carEmitter = new EventEmitter<{name:string,year:number}>()
 
-    addCar(){
+    addCar(carNameEl:HTMLInputElement){
+        console.log(carNameEl.value)
+
         this.carEmitter.emit({
-            name: this.carName,
+            name: carNameEl.value,
             year: this.carYear
         })
-        this.carName = ""
+        carNameEl.value = ""
         this.carYear = 2017
     }
 
