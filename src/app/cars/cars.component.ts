@@ -18,6 +18,10 @@ export class CarsComponent {
         year: 2017
     }]
 
+    updateCarlist(car: {name:string, year:number}){
+        this.cars.push(car)
+    }
+
     constructor() {}
 
 }
