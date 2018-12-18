@@ -1,6 +1,4 @@
-<input type="text" class="form-control" [(ngModel)]="carName">
-<input type="text" class="form-control" [(ngModel)]="carYear">
-<button (click)="addCar()" class="btn btn-primary">Добавить машину</button>
+<app-add-car></app-add-car>
 <hr>
 
 <div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>
