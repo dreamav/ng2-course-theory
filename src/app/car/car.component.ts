@@ -1,16 +1,25 @@
-import {Component, ElementRef, Input, ContentChild} from '@angular/core';
+import {Component, ElementRef, Input, ContentChild, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: '.app-car',
   templateUrl: './car.component.html',
   styleUrls: ['./car.component.css']
 })
-export class CarComponent{
+export class CarComponent implements OnInit,OnChanges{
     @Input('carItem') car:{name:string, year:number}
+    @Input() name:string
     @ContentChild('carHeading') carH: ElementRef
 
-    ngAfterViewInit(){
-        console.log(this.carH.nativeElement.innerText)
+    constructor(){
+        console.log('constructor')
+    }
+
+    ngOnInit() {
+        console.log('ngOnInit')
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        console.log('ngOnChanges', changes)
     }
 }
 
