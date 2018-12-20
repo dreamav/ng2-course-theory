@@ -28,6 +28,10 @@ export class CarsComponent implements OnInit{
         this.cars[0].name= "New car name!"
     }
 
+    deleteCar(){
+        this.cars.splice(0,1)
+    }
+
     constructor() {}
 
     ngOnInit(){

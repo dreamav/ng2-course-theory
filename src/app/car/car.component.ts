@@ -1,11 +1,30 @@
-import {Component, ElementRef, Input, ContentChild, OnInit, OnChanges, SimpleChanges} from '@angular/core';
+import {
+    Component,
+    ElementRef,
+    Input,
+    ContentChild,
+    OnInit,
+    OnChanges,
+    SimpleChanges,
+    DoCheck,
+    AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
+} from '@angular/core';
 
 @Component({
   selector: '.app-car',
   templateUrl: './car.component.html',
   styleUrls: ['./car.component.css']
 })
-export class CarComponent implements OnInit,OnChanges{
+export class CarComponent implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
+{
     @Input('carItem') car:{name:string, year:number}
     @Input() name:string
     @ContentChild('carHeading') carH: ElementRef
@@ -20,6 +39,30 @@ export class CarComponent implements OnInit,OnChanges{
 
     ngOnChanges(changes: SimpleChanges) {
         console.log('ngOnChanges', changes)
+    }
+
+    ngDoCheck() {
+        console.log('ngDoCheck')
+    }
+
+    ngAfterContentInit() {
+        console.log('ngAfterContentInit')
+    }
+
+    ngAfterContentChecked() {
+        console.log('ngAfterContentChecked')
+    }
+
+    ngAfterViewInit() {
+        console.log('ngAfterViewInit')
+    }
+
+    ngAfterViewChecked() {
+        console.log('ngAfterViewChecked')
+    }
+
+    ngOnDestroy() {
+        console.log('ngOnDestroy')
     }
 }
 
