@@ -1,4 +1,5 @@
 import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {element} from "protractor";
 
 @Directive({
   selector: '[appBackground]'
@@ -9,6 +10,8 @@ export class BackgroundDirective implements OnInit {
   }
 
   ngOnInit() {
-      this.renderer.setStyle(this.element.nativeElement, 'background-color', 'blue')
+      const {nativeElement} = this.element
+      this.renderer.setStyle(nativeElement, 'background-color', 'blue')
+      this.renderer.addClass(nativeElement, 'white-text')
   }
 }
