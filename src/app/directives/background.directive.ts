@@ -10,12 +10,16 @@ export class BackgroundDirective implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  @HostListener('mouseenter') mouseEnter(){
       const {nativeElement} = this.element
       this.renderer.setStyle(nativeElement, 'background-color', 'blue')
       this.renderer.addClass(nativeElement, 'white-text')
   }
-
-  @HostListener('mouseenter',['$event']) mouseEnter(event: Event){
-      console.log(event)
+  @HostListener('mouseleave') mouseLeave(){
+      const {nativeElement} = this.element
+      this.renderer.setStyle(nativeElement, 'background-color', 'transparent')
+      this.renderer.removeClass(nativeElement, 'white-text')
   }
 }
