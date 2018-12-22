@@ -4,8 +4,12 @@ import {Directive, ElementRef, OnInit} from '@angular/core';
   selector: '[appBackground]'
 })
 export class BackgroundDirective implements OnInit {
-  constructor(private element: ElementRef) {}
+  constructor(private element: ElementRef) {
+
+  }
 
   ngOnInit() {
+      // console.log(this.element)
+      (<HTMLHeadingElement>this.element.nativeElement).style.backgroundColor = 'red'
   }
 }
