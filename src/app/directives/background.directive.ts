@@ -5,7 +5,7 @@ import {element} from "protractor";
   selector: '[appBackground]'
 })
 export class BackgroundDirective implements OnInit {
-    @Input() hoverColor:string = 'green'
+    @Input('appBackground') hoverColor:string = 'green'
     @Input() defaultColor:string = 'transparent'
     @HostBinding('style.backgroundColor') background: string
 
