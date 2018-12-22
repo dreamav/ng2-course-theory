@@ -1,11 +1,12 @@
-import {Directive, ElementRef, HostBinding, HostListener, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Renderer2} from '@angular/core';
 import {element} from "protractor";
 
 @Directive({
   selector: '[appBackground]'
 })
 export class BackgroundDirective implements OnInit {
-
+    @Input() hoverColor:string = 'green'
+    @Input() defaultColor:string = 'transparent'
     @HostBinding('style.backgroundColor') background: string
 
   constructor(private element: ElementRef, private renderer: Renderer2) {
