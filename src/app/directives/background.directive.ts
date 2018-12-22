@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 import {element} from "protractor";
 
 @Directive({
@@ -13,5 +13,9 @@ export class BackgroundDirective implements OnInit {
       const {nativeElement} = this.element
       this.renderer.setStyle(nativeElement, 'background-color', 'blue')
       this.renderer.addClass(nativeElement, 'white-text')
+  }
+
+  @HostListener('mouseenter',['$event']) mouseEnter(event: Event){
+      console.log(event)
   }
 }
