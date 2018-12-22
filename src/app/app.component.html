@@ -5,7 +5,9 @@
 
     <h3 [appBackground]="'red'" [defaultColor]="'transparent'">{{ headerText }}</h3>
 
-
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of items" (click)="onClick(item)">{{item}}</li>
+    </ul>
 
 
   </div>
