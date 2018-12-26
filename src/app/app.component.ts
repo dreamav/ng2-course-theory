@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
           <ul class="list-group">
               <li
                   class="list-group-item"
-                  *ngFor="let car of cars; let i = index"
+                  *ngFor="let car of cars | carFilter:searchCar; let i = index"
               ><b>{{ i + 1 }}</b> {{car.name}} </li>
           </ul>
       </div>
