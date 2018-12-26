@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="col-xs-8 col-xs-offset-2">
-        <h2>{{ num }}</h2>
+        <h2>{{ num | appPow }}</h2>
     </div>
   `
 })
