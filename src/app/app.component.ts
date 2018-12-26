@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
       <div class="col-xs-8 col-xs-offset-2">
+          <input type="text" class="form-control" [(ngModel)]="searchCar">
+          <hr>
           <ul class="list-group">
               <li
                   class="list-group-item"
@@ -14,6 +16,7 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent {
+    searchCar = ''
     cars = [
         {name: 'Ford', descr: 'WFM 1'},
         {name: 'Mazda', descr: 'WFM 2'},
