@@ -19,7 +19,9 @@ import { Component } from '@angular/core';
         <hr>
         <h2>{{ date | date:'dd/M/yyyy' }}</h2>
         <hr>
-        
+        <h2>{{ amount | percent }}</h2>
+        <hr>
+        <!--<h2>{{  }}</h2>-->
     </div>
   `
 })
