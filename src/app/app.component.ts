@@ -4,7 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="col-xs-8 col-xs-offset-2">
-      
+        <h2>{{ name }}</h2>
+        <h2>{{ name | lowercase }}</h2>
+        <h2>{{ name | uppercase }}</h2>
+        <h2>{{ name | slice:0:3 }}</h2>
+        <h2>{{ name | slice:3:6 | uppercase }}</h2>
+        <hr>
+        
     </div>
   `
 })
