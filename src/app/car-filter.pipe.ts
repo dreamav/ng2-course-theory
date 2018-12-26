@@ -10,7 +10,7 @@ export class CarFilterPipe implements PipeTransform {
           return carList;
       }
 
-      return carList.filter(car => car.name === searchStr);
+      return carList.filter(car => car.name.toLowerCase().indexOf(searchStr.toLowerCase()) !== -1);
   }
 
 }
