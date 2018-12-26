@@ -16,6 +16,10 @@ import { Component } from '@angular/core';
         <h2>{{ pi | number:'2.2-2' }}</h2>
         <hr>
         <h2>{{ money | currency:'UAH':true }}</h2>
+        <hr>
+        <h2>{{ date | date:'dd/M/yyyy' }}</h2>
+        <hr>
+        
     </div>
   `
 })
