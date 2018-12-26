@@ -5,12 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CarFilterPipe implements PipeTransform {
 
-  transform(carList, searchStr: string) {
+  transform(carList, searchStr: string, field: string) {
       if (carList.length === 0 || searchStr === '') {
           return carList;
       }
 
-      return carList.filter(car => car.name.toLowerCase().indexOf(searchStr.toLowerCase()) !== -1);
+      return carList.filter(car => car[field].toLowerCase().indexOf(searchStr.toLowerCase()) !== -1);
   }
 
 }
