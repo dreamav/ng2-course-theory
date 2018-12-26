@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         <h2>{{ pi | number:'1.2-3' }}</h2>
         <h2>{{ pi | number:'2.2-2' }}</h2>
         <hr>
-        
+        <h2>{{ money | currency:'UAH':true }}</h2>
     </div>
   `
 })
