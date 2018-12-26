@@ -21,7 +21,8 @@ import { Component } from '@angular/core';
         <hr>
         <h2>{{ amount | percent }}</h2>
         <hr>
-        <!--<h2>{{  }}</h2>-->
+        <h2>{{ object }}</h2>
+        <h2><pre>{{ object | json }}</pre></h2>
     </div>
   `
 })
