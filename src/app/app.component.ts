@@ -10,6 +10,11 @@ import { Component } from '@angular/core';
         <h2>{{ name | slice:0:3 }}</h2>
         <h2>{{ name | slice:3:6 | uppercase }}</h2>
         <hr>
+        <h2>{{ pi }}</h2>
+        <h2>{{ pi | number }}</h2>
+        <h2>{{ pi | number:'1.2-3' }}</h2>
+        <h2>{{ pi | number:'2.2-2' }}</h2>
+        <hr>
         
     </div>
   `
