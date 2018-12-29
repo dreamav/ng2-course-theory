@@ -7,7 +7,7 @@ import {Observable} from "rxjs/Observable";
   selector: 'app-root',
   template: `
       <div class="col-xs-8 col-xs-offset-2">
-          <h1>{{ title }}</h1>
+          <h1>{{ asyncTitle | async }}</h1>
           <input type="text" class="form-control" [(ngModel)]="searchCar">
           <hr>
           <ul class="list-group">
@@ -30,8 +30,6 @@ export class AppComponent {
         {name: 'BWM', descr: 'WFM 6'}
     ]
 
-    title = ''
     asyncTitle = Observable.of('Async Title 3 seconds')
         .delay(3000)
-        .subscribe( (str) => this.title = str )
 }
