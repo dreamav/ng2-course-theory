@@ -3,7 +3,8 @@ import {CarsService} from "./cars.service";
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html'
+    templateUrl: './app.component.html',
+    providers: [CarsService]
 })
 
 export class AppComponent implements OnInit{

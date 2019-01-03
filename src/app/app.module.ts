@@ -19,7 +19,7 @@ import {CarsService} from "./cars.service";
     FormsModule,
     HttpModule
   ],
-  providers: [CarsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
