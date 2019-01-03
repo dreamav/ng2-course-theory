@@ -13,4 +13,10 @@ export class AppComponent {
         type: 'no',
         text: 'Нет'
     }];
+
+    submitForm(){
+        console.log("Submitted!");
+    }
+
+
 }
