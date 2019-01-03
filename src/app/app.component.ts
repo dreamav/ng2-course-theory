@@ -16,6 +16,9 @@ export class AppComponent {
         text: 'Нет'
     }];
 
+    defaultAnswer = 'yes';
+    defaultCountry = 'ua';
+
     submitForm(form: NgForm){
         console.log("Submitted!", form);
     }
