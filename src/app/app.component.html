@@ -43,7 +43,11 @@
                 > {{ans.text}}
             </label>
         </div>
-        <button class="btn btn-success" type="submit">Сохранить</button>
+        <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="!form.valid"
+        >Сохранить</button>
 
     </form>
 </div>
