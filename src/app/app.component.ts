@@ -20,6 +20,9 @@ export class AppComponent {
     defaultAnswer = 'yes';
     defaultCountry = 'ua';
 
+    formData = {};
+    isSubmitted = false;
+
     addRandEmail(){
         const randEmail = 'reloved@gmail.com';
         this.form.form.patchValue({
@@ -28,7 +31,8 @@ export class AppComponent {
     }
 
     submitForm(){
-        console.log("Submitted!", this.form);
+        this.isSubmitted = true;
+        this.formData = this.form.value;
     }
 
 
