@@ -1,6 +1,6 @@
 <div class="col-xs-8 col-xs-offset-2">
     <form (ngSubmit)="submitForm(form)" #form="ngForm">
-        <div ngModelGroup="user">
+        <div ngModelGroup="user" #user="ngModelGroup">
             <div class="form-group" [ngClass]="{'has-error':email.invalid && email.touched}">
                 <label>Email</label>
                 <input
@@ -25,6 +25,7 @@
                     #pass="ngModel"
                 >
                 <p *ngIf="pass.invalid && pass.touched">Пароль не должен быть пустым</p>
+                <p *ngIf="user.invalid && user.touched">Данные пользователя заполнены неверно</p>
             </div>
         </div>
         <div class="form-group">
