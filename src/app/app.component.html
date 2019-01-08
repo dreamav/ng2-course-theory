@@ -1,5 +1,5 @@
 <div class="col-xs-8 col-xs-offset-2">
-    <form [formGroup]="form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Email</label>
             <input type="text" class="form-control" formControlName="email">

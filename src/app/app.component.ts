@@ -25,4 +25,8 @@ export class AppComponent implements OnInit{
             answer: new FormControl('no'),
         })
     }
+
+    onSubmit(){
+        console.log('Submitted', this.form);
+    }
 }
