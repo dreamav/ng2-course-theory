@@ -22,13 +22,8 @@ export class AppComponent {
 
     addRandEmail(){
         const randEmail = 'reloved@gmail.com';
-        this.form.setValue({
-            user:{
-                pass:'',
-                email: randEmail
-            },
-            country: '',
-            answer: ''
+        this.form.form.patchValue({
+            user:{email:randEmail}
         })
     }
 
