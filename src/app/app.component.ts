@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
     ngOnInit(){
         this.form = new FormGroup({
             user: new FormGroup({
-                email: new FormControl('',[Validators.required,Validators.required],this.checkForEmail),
+                email: new FormControl('',[Validators.required,Validators.email],this.checkForEmail),
                 pass: new FormControl('',[Validators.required, this.checkForLength.bind(this)]),
             }),
             country: new FormControl('ua'),
