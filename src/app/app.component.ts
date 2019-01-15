@@ -1,6 +1,11 @@
 import {Component} from '@angular/core';
 import {CarsService} from "./cars.service";
-import {Response} from "@angular/http";
+
+interface Cars {
+    name: string,
+    color: string,
+    id: number
+}
 
 @Component({
     selector: 'app-root',
@@ -12,14 +17,13 @@ export class AppComponent{
 
     }
 
-    cars = [];
+    cars: Cars[] = [];
 
     loadCars(){
         this.carsService
-            .getCars()              // вернет Observable
-            .subscribe((response: Response) => {
-                const data = response.json()
-                console.log(data)
+            .getCars()
+            .subscribe( (cars: Cars[]) => {
+                this.cars = cars
             })
     }
 }
