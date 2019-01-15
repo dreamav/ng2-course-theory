@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {CarsService} from "./cars.service";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
 
     constructor (private carsService: CarsService){
 
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
 
     cars = [];
 
-    ngOnInit(){
+    loadCars(){
         this.carsService
             .getCars()              // вернет Observable
             .subscribe((response) => {
