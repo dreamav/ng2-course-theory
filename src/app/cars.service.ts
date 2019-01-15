@@ -5,5 +5,7 @@ import {Http} from "@angular/http";
 export class CarsService{
     constructor (private http: Http){}
 
-
+    getCars(){
+        this.http.get('localhost:3000/cars')
+    }
 }
