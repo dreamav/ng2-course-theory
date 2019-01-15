@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {CarsService} from "./cars.service";
+import {Response} from "@angular/http";
 
 @Component({
     selector: 'app-root',
@@ -16,8 +17,9 @@ export class AppComponent{
     loadCars(){
         this.carsService
             .getCars()              // вернет Observable
-            .subscribe((response) => {
-                console.log(response)
+            .subscribe((response: Response) => {
+                const data = response.json()
+                console.log(data)
             })
     }
 }
