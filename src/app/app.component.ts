@@ -27,6 +27,11 @@ export class AppComponent{
     }
 
     addCar(){
-
+        this.carsService
+            .addCar(this.carName)
+            .subscribe((car:Cars)=>{
+                // console.log(json)
+                this.cars.push(car);
+            })
     }
 }
