@@ -46,4 +46,7 @@ export class AppComponent{
         const num = Math.round(Math.random() * (this.colors.length - 1));
         return this.colors[num];
     }
+    setNewColor(id:number){
+        this.carsService.changeColor(id)
+    }
 }

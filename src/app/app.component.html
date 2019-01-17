@@ -8,6 +8,7 @@
         <li class="list-group-item" *ngFor="let car of cars">
             <span class="badge" [ngStyle]="{background: car.color}">{{car.id}}</span>
             {{car.name}}
+            <button class="btn btn-xs" (click)="setNewColor(car.id)">Изменить цвет</button>
         </li>
     </ul>
 </div>
