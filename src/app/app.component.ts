@@ -13,11 +13,10 @@ interface Cars {
 })
 export class AppComponent{
 
-    constructor (private carsService: CarsService){
-
-    }
-
     cars: Cars[] = [];
+    carName: string;
+
+    constructor (private carsService: CarsService){}
 
     loadCars(){
         this.carsService
@@ -25,5 +24,9 @@ export class AppComponent{
             .subscribe( (cars: Cars[]) => {
                 this.cars = cars
             })
+    }
+
+    addCar(){
+
     }
 }
