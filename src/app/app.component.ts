@@ -28,11 +28,15 @@ export class AppComponent{
     loadCars(){
         this.carsService
             .getCars()
-            .subscribe( (cars: Cars[]) => {
+            .subscribe(
+                (cars: Cars[]) => {
                 this.cars = cars
-            })
+            },
+                (error) => {
+                    alert(error)
+                }
+            )
     }
-
     addCar(){
         this.carsService
             .addCar(this.carName)
@@ -41,7 +45,6 @@ export class AppComponent{
                 this.cars.push(car);
             })
     }
-
     getRandColor(){
         const num = Math.round(Math.random() * (this.colors.length - 1));
         return this.colors[num];
