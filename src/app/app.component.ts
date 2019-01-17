@@ -47,6 +47,9 @@ export class AppComponent{
         return this.colors[num];
     }
     setNewColor(id:number){
-        this.carsService.changeColor(id)
+        this.carsService.changeColor(id,this.getRandColor())
+            .subscribe((data)=>{
+                console.log(data);
+            })
     }
 }
