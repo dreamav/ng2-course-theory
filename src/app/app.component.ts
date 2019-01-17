@@ -52,4 +52,10 @@ export class AppComponent{
                 console.log(data);
             })
     }
+    deleteCar(car: Cars){
+        this.carsService.deleteCar(car)
+            .subscribe((data)=>{
+                console.log(data);
+            })
+    }
 }
