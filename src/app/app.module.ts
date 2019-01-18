@@ -7,12 +7,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CarsPageComponent } from './cars-page/cars-page.component';
 import { CarsService } from './cars.service';
-import {RouterModule, Routes} from "@angular/router";
-
-const appRoutes: Routes = [
-  {path: 'cars', component: CarsPageComponent},
-  {path: '', component: HomePageComponent}
-]
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +19,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]
