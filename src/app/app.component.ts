@@ -1,64 +1,65 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarsService} from "./cars.service";
 
 interface Cars {
-    name: string,
-    color: string,
-    id: number
+  name: string,
+  color: string,
+  id: number
 }
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html'
+  selector: 'app-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent{
-    colors = [
-        'red',
-        'blue',
-        'green',
-        'pink',
-        'yelllow',
-        'grey'
-    ];
-    cars: Cars[] = [];
-    carName: string;
+  colors = [
+    'red',
+    'blue',
+    'green',
+    'pink',
+    'yelllow',
+    'grey'
+  ];
+  cars: Cars[] = [];
+  carName: string;
 
-    constructor (private carsService: CarsService){}
+  constructor(private carsService: CarsService) {
+  }
 
-    loadCars(){
-        this.carsService
-            .getCars()
-            .subscribe(
-                (cars: Cars[]) => {
-                this.cars = cars
-            },
-                (error) => {
-                    alert(error)
-                }
-            )
+    loadCars() {
+      this.carsService
+        .getCars()
+        .subscribe(
+          (cars: Cars[]) => {
+            this.cars = cars
+          },
+          (error) => {
+            alert(error)
+          }
+        )
     }
-    addCar(){
-        this.carsService
-            .addCar(this.carName)
-            .subscribe((car:Cars)=>{
-                // console.log(json)
-                this.cars.push(car);
-            })
+    addCar() {
+      this.carsService
+        .addCar(this.carName)
+        .subscribe((car: Cars) => {
+          // console.log(json)
+          this.cars.push(car);
+        })
     }
-    getRandColor(){
-        const num = Math.round(Math.random() * (this.colors.length - 1));
-        return this.colors[num];
+    getRandColor() {
+      const num = Math.round(Math.random() * (this.colors.length - 1));
+      return this.colors[num];
     }
-    setNewColor(car: Cars){
-        this.carsService.changeColor(car,this.getRandColor())
-            .subscribe((data)=>{
-                console.log(data);
-            })
+    setNewColor(car: Cars) {
+      this.carsService.changeColor(car, this.getRandColor())
+        .subscribe((data) => {
+          console.log(data);
+        })
     }
-    deleteCar(car: Cars){
-        this.carsService.deleteCar(car)
-            .subscribe((data)=>{
-                this.cars = this.cars.filter(c => c.id !== car.id);
-            })
+    deleteCar(car: Cars) {
+      this.carsService.deleteCar(car)
+        .subscribe((data) => {
+          this.cars = this.cars.filter(c => c.id !== car.id);
+        })
     }
-}
+  }
