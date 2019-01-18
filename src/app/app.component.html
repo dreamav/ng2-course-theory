@@ -6,7 +6,7 @@
     <button class="btn btn-success" (click)="addCar()">Добавить машину</button>
     <hr>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let car of cars">
+        <li class="list-group-item" *ngFor="let car of cars | async">
             <span class="badge" [ngStyle]="{background: car.color}">{{car.id}}</span>
             {{car.name}}
             <button class="btn btn-xs btn-info" (click)="setNewColor(car)">Изменить цвет</button>

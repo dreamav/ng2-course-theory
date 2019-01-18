@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
     'yelllow',
     'grey'
   ];
-  cars: Cars[] = [];
+  cars: any;
   carName: string;
 
   constructor(private carsService: CarsService) {
@@ -33,16 +33,7 @@ export class AppComponent implements OnInit{
 
 
     loadCars() {
-      this.carsService
-        .getCars()
-        .subscribe(
-          (cars: Cars[]) => {
-            this.cars = cars
-          },
-          (error) => {
-            alert(error)
-          }
-        )
+      this.cars = this.carsService.getCars()
     }
     addCar() {
       this.carsService
