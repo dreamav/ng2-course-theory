@@ -7,7 +7,11 @@ export class CarsService {
   constructor(private http: Http) {
   }
 
-
+  getAppTitle() {
+    return this.http.get('http://localhost:3000/title')
+      .map( (response) => response.json() )
+      .map( (data) => data.value )
+  }
 
   getCars() {
     const headers = new Headers({

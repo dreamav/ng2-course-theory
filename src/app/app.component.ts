@@ -11,7 +11,7 @@ interface Cars {
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   colors = [
     'red',
     'blue',
@@ -25,6 +25,12 @@ export class AppComponent{
 
   constructor(private carsService: CarsService) {
   }
+
+  appTitle;
+  ngOnInit() {
+    this.appTitle = this.carsService.getAppTitle()
+  }
+
 
     loadCars() {
       this.carsService
