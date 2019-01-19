@@ -8,12 +8,12 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class CarPageComponent implements OnInit {
 
-  id:string;
+  id:number;
 
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
+    this.id = +this.route.snapshot.params['id'];
   }
 
 }
