@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {CarPageComponent} from "./car-page/car-page.component";
 import {CarsPageComponent} from "./cars-page.component";
 import {CarsService} from "../cars.service";
+import {CarsRoutingModule} from "./cars-routing.module";
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import {CarsService} from "../cars.service";
   ],
   declarations: [
     CarsPageComponent,
-    CarPageComponent
+    CarPageComponent,
+    CarsRoutingModule
   ],
   providers: [
     CarsService
