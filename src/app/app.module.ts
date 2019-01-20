@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ColorDirective } from './shared/color.directive';
 import { HeaderComponent } from './header/header.component';
+import {CarsModule} from "./cars-page/cars.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
