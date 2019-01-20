@@ -7,12 +7,12 @@ import {CarsRoutingModule} from "./cars-routing.module";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CarsRoutingModule
   ],
   declarations: [
     CarsPageComponent,
-    CarPageComponent,
-    CarsRoutingModule
+    CarPageComponent
   ],
   providers: [
     CarsService
