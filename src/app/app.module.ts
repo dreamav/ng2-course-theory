@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CarsService } from './cars.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ColorDirective } from './shared/color.directive';
 import { HeaderComponent } from './header/header.component';
@@ -23,7 +22,7 @@ import { HeaderComponent } from './header/header.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [CarsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
