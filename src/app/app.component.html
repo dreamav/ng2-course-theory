@@ -1,1 +1,6 @@
-<div [@clickedDiv]="'start'"></div>
+<div
+  (click)="changeDivState()"
+  [@clickedDiv]="clickedDivState"
+>
+
+</div>
