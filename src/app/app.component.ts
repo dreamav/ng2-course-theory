@@ -36,7 +36,12 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
         height: '170px',
         background: 'blue'
       })),
-      transition('start <=> end', animate(500))
+      transition('start <=> end', [
+        style({
+          background: 'red'
+        }),
+        animate(500)
+      ])
     ])
   ]
 })
