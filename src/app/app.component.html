@@ -1,6 +1,7 @@
 <button class="btn btn-primary" (click)="isVisible = !isVisible">Переключить</button>
 <hr>
 <div
+  [@divTrigger] = "'show'"
   class="alert alert-danger"
   *ngIf="isVisible"
 >
