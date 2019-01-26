@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import {divTrigger} from "./app.animations";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  animations: [divTrigger]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isVisible = false;
+  title = 'app works!';
 }
