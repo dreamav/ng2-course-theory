@@ -1,4 +1,4 @@
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import {animate, group, state, style, transition, trigger} from "@angular/animations";
 
 export const divTrigger = trigger('divTrigger',[
   transition(':enter', [
@@ -6,11 +6,15 @@ export const divTrigger = trigger('divTrigger',[
       width: '*',
       height: '*'
     }),
-    animate(2000, style({
-      width:'200px',
-      height:'200px',
-      backgroundColor: 'blue'
-    })),
+    group([
+      animate(3000, style({
+        width:'200px',
+        height:'200px'
+      })),
+      animate(6000, style({
+        backgroundColor: 'blue'
+      }))
+    ]),
     animate(1000)
   ]),
   transition(':leave', animate(500, style({opacity:0})))
